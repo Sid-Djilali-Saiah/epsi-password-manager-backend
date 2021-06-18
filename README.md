@@ -33,25 +33,25 @@ npm run start
 `/POST user`
 
 ```bash
-curl --location --request POST 'https://ts-node-base-app.herokuapp.com/user' \
+curl --location --request POST 'http://localhost:1337/user' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "email": "m1theus@github.com",
+  "email": "sid.djilalisaiah@github.com",
   "password": "StrongPassword123",
-  "firstName": "Matheus",
-  "lastName": "Martins",
-  "age": 21
+  "firstName": "Sid",
+  "lastName": "Djilali Saiah",
+  "age": 24
 }'
 ```
 
 `/POST auth`
 
 ```bash
-curl --location --request POST 'https://ts-node-base-app.herokuapp.com/auth' \
+curl --location --request POST 'http://localhost:1337/auth' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "email": "m1theus@github.com",
+  "email": "sid.djilalisaiah@github.com",
   "password": "StrongPassword123"
 }'
 ```
@@ -59,7 +59,7 @@ curl --location --request POST 'https://ts-node-base-app.herokuapp.com/auth' \
 `/GET user/:id`
 
 ```bash
-curl --location --request GET 'https://ts-node-base-app.herokuapp.com/user/0a0117d6-f6f4-4a96-a47e-3bfc8d6ee32e' \
+curl --location --request GET 'http://localhost:1337/user/0a0117d6-f6f4-4a96-a47e-3bfc8d6ee32e' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODk3NTczNTYsImV4cCI6MTU4OTc2MDk1Niwic3ViIjoiMGEwMTE3ZDYtZjZmNC00YTk2LWE0N2UtM2JmYzhkNmVlMzJlIn0.fVgV4Qf7o0-sE-rD1nx6L-ChBABHfiJkIY8Qe2MAVcc'
 ```
@@ -79,7 +79,6 @@ curl --location --request DELETE 'https://ts-node-base-app.herokuapp.com/user/0a
 - [BCrypt](https://github.com/kelektiv/node.bcrypt.js)
 - [JWT](https://jwt.io/)
 - [UUIDv4](https://github.com/thenativeweb/uuidv4)
-- [Sentry.io](https://sentry.io/)
 - [TypeORM](https://typeorm.io/#/)
 - [TSyringe](https://github.com/microsoft/tsyringe)
 - [Jest](https://jestjs.io/docs/en/getting-started)
