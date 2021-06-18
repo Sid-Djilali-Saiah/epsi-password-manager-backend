@@ -1,16 +1,15 @@
-FROM node:10-alpine
+FROM node:12-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /usr/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci -qy
 
-COPY . .
-COPY ./ormconfig.docker.json ./ormconfig.json
+COPY ./ .
 
 RUN npm run build
 
 EXPOSE 1337
 
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "run", "dev" ]
