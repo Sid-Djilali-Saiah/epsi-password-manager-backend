@@ -4,15 +4,13 @@ services:
     container_name: ts-node-base-app
     restart: always
     build: .
+    command: npm run start
     depends_on:
       - postgres
     links:
       - postgres
     environment:
       - PORT=1337
-    volumes:
-      - ./:/usr/app
-      - /usr/app/node-modules
     networks:
       - app-connect
     ports:
